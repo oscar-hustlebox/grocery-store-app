@@ -1,5 +1,12 @@
-import React from 'react';
+import { Cart } from '../cart/Cart';
+import { Products } from '../products/Products';
+import { StyledWrapper } from './styles';
 
 export const Store = () => {
-    return <div>Store</div>;
+    return (
+        <StyledWrapper>
+            <Cart />
+            <Products />
+        </StyledWrapper>
+    );
 };
