@@ -1,25 +1,13 @@
+import { RootState } from '../../../redux/store';
 import { ProductItem } from '../product-item/ProductItem';
 import { StyledProductItems } from './styles';
-
-const PRODUCTS = [
-    {
-        id: 'p1',
-        name: 'Apple',
-    },
-    {
-        id: 'p2',
-        name: 'Grape',
-    },
-    {
-        id: 'p3',
-        name: 'Peach',
-    },
-];
+import { useSelector } from 'react-redux';
 
 export const ProductItems = () => {
+    const products = useSelector((state: RootState) => state.products);
     return (
         <StyledProductItems>
-            {PRODUCTS.map((product) => (
+            {products.map((product) => (
                 <ProductItem key={product.id} product={product} />
             ))}
         </StyledProductItems>

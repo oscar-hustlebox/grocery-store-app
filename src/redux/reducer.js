@@ -1,8 +1,8 @@
 const initialState = {
     products: [
-        { id: 0, text: 'grapes', price: 5 },
-        { id: 1, text: 'apples', price: 3 },
-        { id: 2, text: 'peaches!', price: 7 },
+        { id: 0, name: 'grapes', price: 5 },
+        { id: 1, name: 'apples', price: 3 },
+        { id: 2, name: 'peaches', price: 7 },
     ],
     cart: [],
 };
