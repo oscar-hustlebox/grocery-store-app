@@ -19,10 +19,13 @@ export const cartSlice = createSlice({
             }, initialState);
             state = products;
         },
+        clearCart: () => {
+            return initialState;
+        },
     },
 });
 
 // Action creators are generated for each case reducer function
-export const { getCart, addToCart } = cartSlice.actions;
+export const { getCart, addToCart, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
