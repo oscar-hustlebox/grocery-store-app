@@ -2,7 +2,7 @@ import { StyledProductItem, StyledFlexWrapper } from './styles';
 
 type ProductItemProps = { product: { id: number; name: string; price: number } };
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../../redux/slices/cart/slice';
+import { addToCart, removeFromCart } from '../../../redux/slices/cart/slice';
 
 export const ProductItem = ({ product }: ProductItemProps) => {
     const dispatch = useDispatch();
@@ -13,7 +13,10 @@ export const ProductItem = ({ product }: ProductItemProps) => {
                 <p>{product.name}</p>
             </StyledFlexWrapper>
             <h2>${product.price}</h2>
-            <button onClick={() => dispatch(addToCart(product.id))}>Add to Cart</button>
+            <div>
+                <button onClick={() => dispatch(removeFromCart(product.id))}>Remove</button>
+                <button onClick={() => dispatch(addToCart(product.id))}>Add</button>
+            </div>
         </StyledProductItem>
     );
 };
