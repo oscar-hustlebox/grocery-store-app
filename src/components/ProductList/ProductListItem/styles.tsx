@@ -9,8 +9,21 @@ export const StyledProductListItem = styled.div`
     border: 1px solid #ccc;
 `;
 
-export const StyledFlexWrapper = styled.div`
+export const StyledHeader = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+    & > h2, h5, p {
+        margin: 0;
+    }
+`;
+export const StyledFooter = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 `;

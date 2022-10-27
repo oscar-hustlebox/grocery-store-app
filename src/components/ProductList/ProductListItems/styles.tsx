@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledProductListItems = styled.div`
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    padding: 1rem;
 `;
