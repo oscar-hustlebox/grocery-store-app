@@ -5,6 +5,10 @@ export const StyledProductCartTotal = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem;
-    border-bottom: 1px solid #ccc;
+    width: 100%;
+    border-top: 1px solid #ccc;
+`;
+export const StyledPrice = styled.p`
+    font-size: 1rem;
+    font-weight: 600;
 `;

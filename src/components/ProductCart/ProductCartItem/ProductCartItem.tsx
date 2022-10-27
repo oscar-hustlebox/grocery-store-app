@@ -16,7 +16,9 @@ export const ProductCartItem = ({ item }: { item: ProductState }) => {
     console.log(formatter.format(2500)); /* $2,500.00 */
     return (
         <StyledProductCartItem>
-            <StyledItemName>{item.name}</StyledItemName>
+            {/* TODO add image of product */}
+            <StyledItemName>{item.productName}</StyledItemName>
+            {/* TODO add discount 'label' */}
             <FlexRow>
                 <p>Qty:&nbsp;</p>
                 <p>{item.quantity}</p>

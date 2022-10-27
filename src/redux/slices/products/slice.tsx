@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export type ProductState = {
     id: number;
     name: 'apples' | 'grapes' | 'peaches';
+    productName: 'Apples' | 'Grapes' | 'Peaches';
     price: number;
     quantity: number;
 };
@@ -13,25 +14,28 @@ export const initialState: ProductsState = [
     {
         id: 1,
         name: 'grapes',
+        productName: 'Grapes',
         price: 5,
         quantity: 0,
     },
     {
         id: 2,
         name: 'apples',
+        productName: 'Apples',
         price: 3,
         quantity: 0,
     },
     {
         id: 3,
         name: 'peaches',
+        productName: 'Peaches',
         price: 7,
         quantity: 0,
     },
 ];
 
 export const productsSlice = createSlice({
-    name: 'counter',
+    name: 'products',
     initialState,
     reducers: {
         getProducts: (state, action) => {
