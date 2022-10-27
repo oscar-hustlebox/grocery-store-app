@@ -1,23 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export type ProductsState = {
+export type ProductState = {
     id: number;
     name: 'apples' | 'grapes' | 'peaches';
     price: number;
     quantity: number;
-}[];
+};
+
+export type ProductsState = ProductState[];
 
 export const initialState: ProductsState = [
     {
         id: 1,
-        name: 'apples',
-        price: 3,
+        name: 'grapes',
+        price: 5,
         quantity: 0,
     },
     {
         id: 2,
-        name: 'grapes',
-        price: 5,
+        name: 'apples',
+        price: 3,
         quantity: 0,
     },
     {
