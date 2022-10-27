@@ -1,12 +1,13 @@
-import { LineItems } from '../line-items/LineItems';
+import React from 'react';
+import { ProductCartItems } from './ProductCartItems/ProductCartItems';
 import { StyledWrapper } from './styles';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { RootState } from '../../redux/store';
-import { CartTotal } from '../cart-total/CartTotal';
+import { ProductCartTotal } from './ProductCartTotal/ProductCartTotal';
 import { clearCart } from '../../redux/slices/cart/slice';
 
-export const Cart = () => {
+export const ProductCart = () => {
     const items = useSelector((state: RootState) => state.cart);
     const dispatch = useDispatch();
     return (
@@ -15,8 +16,8 @@ export const Cart = () => {
                 <h1>Cart</h1>
                 <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
             </div>
-            <LineItems items={items} />
-            <CartTotal items={items} />
+            <ProductCartItems items={items} />
+            <ProductCartTotal items={items} />
         </StyledWrapper>
     );
 };

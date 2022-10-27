@@ -1,5 +1,5 @@
 import './App.css';
-import { StoreFront } from './components/store-front/StoreFront';
+import { StoreFront } from './components/StoreFront';
 
 function App() {
     return (

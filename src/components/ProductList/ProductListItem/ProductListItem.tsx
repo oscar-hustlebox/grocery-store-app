@@ -1,13 +1,15 @@
-import { StyledProductItem, StyledFlexWrapper } from './styles';
-
-type ProductItemProps = { product: { id: number; name: string; price: number } };
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart, removeFromCart } from '../../../redux/slices/cart/slice';
 
-export const ProductItem = ({ product }: ProductItemProps) => {
+import { StyledProductListItem, StyledFlexWrapper } from './styles';
+
+type ProductListItemProps = { product: { id: number; name: string; price: number } };
+
+export const ProductListItem = ({ product }: ProductListItemProps) => {
     const dispatch = useDispatch();
     return (
-        <StyledProductItem>
+        <StyledProductListItem>
             <StyledFlexWrapper>
                 <h5>Product Item:&nbsp;</h5>
                 <p>{product.name}</p>
@@ -17,6 +19,6 @@ export const ProductItem = ({ product }: ProductItemProps) => {
                 <button onClick={() => dispatch(removeFromCart(product.id))}>Remove</button>
                 <button onClick={() => dispatch(addToCart(product.id))}>Add</button>
             </div>
-        </StyledProductItem>
+        </StyledProductListItem>
     );
 };

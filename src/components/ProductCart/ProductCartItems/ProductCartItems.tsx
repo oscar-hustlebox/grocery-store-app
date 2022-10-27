@@ -1,10 +1,11 @@
-import { ProductsState } from '../../redux/slices/products/slice';
+import React from 'react';
+import { ProductsState } from '../../../redux/slices/products/slice';
 
-type LineItemsProps = {
+type ProductCartItemsProps = {
     items: ProductsState;
 };
 
-export const LineItems = ({ items }: LineItemsProps) => {
+export const ProductCartItems = ({ items }: ProductCartItemsProps) => {
     return (
         <>
             {items.map((item) => (

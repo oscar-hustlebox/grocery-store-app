@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledProductItem = styled.div`
+export const StyledProductListItem = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,5 +1,5 @@
 import { calculateCartTotal } from './utils';
-import { ProductsState } from '../../redux/slices/products/slice';
+import { ProductsState } from './redux/slices/products/slice';
 
 describe('calculateCartTotal()', () => {
     test('Should be $12 - 1x grapes, 0x apples 1x peaches', () => {

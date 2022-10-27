@@ -1,4 +1,4 @@
-import { initialState, ProductsState, ProductState } from '../../redux/slices/products/slice';
+import { initialState, ProductsState, ProductState } from './redux/slices/products/slice';
 
 export const calculateGrapesTotal = (items: ProductsState) => {
     // Buy one bag of grapes and get another bag of grapes for free
